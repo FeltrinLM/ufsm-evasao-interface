@@ -1,0 +1,18 @@
+graph TD
+
+    Coordenador((Coordenador de curso)) --> A[Acessar página inicial]
+    Diretor((Diretor de centro))       --> A
+    Adm((Administrador da UFSM)) --> A
+
+    A -.-> B[Fazer Login]
+
+    subgraph "Filtragem de Alunos"
+        direction TB
+        C[Filtrar alunos com base nos privilégios do usuário]
+        D[Mostrar os alunos filtrados]
+    end
+
+    B -.-> C
+    C -.->D
+
+    D -.-> E[Visualizar detalhes de um aluno]

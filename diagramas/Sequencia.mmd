@@ -1,0 +1,17 @@
+---
+config:
+  theme: redux
+---
+sequenceDiagram
+    actor User
+    participant Home
+    participant Login
+    participant Cadastro
+    participant Alunos_geral
+    participant Alunos_detalhe
+    User->>Home: Entra na tela Home
+    Home->>Login: Usuário clica no botão login
+    Login->>Cadastro: Se não possui conta, vai para Cadastro
+    Cadastro->>Alunos_geral: Acessa dashboard
+    Alunos_geral->>Alunos_detalhe: Clica em aluno para ver seus detalhes
+    Alunos_detalhe->>Alunos_geral: Volta para dashboard
