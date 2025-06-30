@@ -1,0 +1,198 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d2d2d2;
+}
+
+
+h1, h2, h3 {
+    font-weight: bold;
+}
+
+
+.pagina-conteudo {
+    margin: 20px auto;     /* margem superior + centralização */
+    padding: 20px;         /* espaço interno */
+    max-width: 1600px;     /* limite de largura igual ao protótipo */
+    border-radius: 10px;
+    background-color: white;
+}
+
+.margem-conteudo{
+    margin-left: 100px;
+}
+
+
+.container-imagens-titulo {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+}
+
+.imagem-sobreposta {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+}
+
+.imagem-sobreposta-titulo-topo {
+    position: absolute;
+    top: -10px;
+    left:0;
+}
+
+.imagem-sobreposta-titulo-bot {
+    position: absolute;
+    top: 0;
+    left: 17px;
+}
+
+.btn-voltar {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+}
+
+#graficoEvolucao{
+    margin-left: 60px;
+}
+
+.usuario-texto {
+    position: absolute;
+    left: -120px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #000000;
+    transition: left 0.2s ease-in-out;
+}
+
+/* quando hover NO container ou container .ativo */
+.usuario-menu-container:hover .usuario-texto,
+.usuario-menu-container.ativo .usuario-texto {
+    left: -160px;
+}
+
+
+
+
+.usuario-menu-container {
+    position: relative;
+    width: 50px;
+    height: 50px;
+}
+
+#usuarioBotao {
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #1f1f1f;
+    border-radius: 50%;
+    background-image: url('../icons/usuario_teste.png');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    transition: all 0.2s ease-in-out;
+    z-index: 2;
+}
+
+#usuarioBotao:hover,
+#usuarioBotao.ativo {
+    transform: scale(1.4);
+    border-color: #c4ab82;
+    box-shadow: 0 0 10px #c4ab82;
+}
+
+.menu-usuario {
+    top: 70px; /* distância abaixo do botão */
+    right: 40px;
+    min-width: 120px;
+    z-index: 10;
+}
+
+.menu-usuario a:hover {
+    background-color: #f2f2f2;
+}
+
+
+/* Linha genérica para representar variáveis no gráfico */
+.bg-secondary {
+    background-color: #dcdcdc !important;
+}
+
+
+/* Ajustes para a imagem do gráfico */
+img.img-fluid {
+    max-height: 250px;
+    object-fit: contain;
+}
+
+/* Estilo das variáveis (usado quando eram blocos cinzas) */
+.tabela-variaveis .linha {
+    height: 30px;
+    background-color: #dcdcdc;
+    margin-bottom: 8px;
+    border-radius: 3px;
+}
+
+/* Responsividade extra para o aside em telas menores */
+@media (max-width: 768px) {
+    aside {
+        margin-top: 2rem;
+    }
+}
+
+/* Texto do quadro lateral */
+aside .text-start div {
+    margin-bottom: 10px;
+}
+
+/* Pequeno ajuste visual para suavizar a sombra dos cards (opcional) */
+.bg-light {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e0e0e0;
+}
+
+/* Estilo das linhas do quadro de variáveis (com texto real) */
+.tabela-item {
+    padding: 6px 0;
+    border-bottom: 1px solid #e0e0e0;
+    font-size: 20px;
+}
+
+.tabela-item:last-child {
+    border-bottom: none;
+}
+
+.info-lateral {
+    width: 300px;
+    margin-left: 7%;
+    position: relative;
+    top: 100px;
+}
+
+
+@media (max-width: 768px) {
+    .info-lateral {
+        width: 100%;        /* ocupa largura total no mobile */
+    }
+}
+
+.imagem-perfil {
+    width: 100%;
+    height: 300px;
+    border-radius: 4px;
+    background-image: url('../icons/garota_ia.png');
+    background-size: cover;
+    background-position: center top; /* <- Isso sobe a imagem */
+    background-repeat: no-repeat;
+}
